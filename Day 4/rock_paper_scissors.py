@@ -31,7 +31,9 @@ choices = [rock, paper, scissors]
 player_choice = int(input("0 for rock, 1 for paper, 2 for scissors: "))
 computer_choice = random.randint(0,2)
 
-if player_choice == computer_choice:
+if player_choice < 0 or player_choice > 2:
+    print("You entered an invalid number, you lose.")
+elif player_choice == computer_choice:
     print(choices[player_choice] + "\nComputer chose:\n" + choices[computer_choice] + "\nTie!")
 elif player_choice == 0 and computer_choice == 2:
     print(choices[player_choice] + "\nComputer chose:\n" + choices[computer_choice] + "\nYou win!")
